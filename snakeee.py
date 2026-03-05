@@ -87,3 +87,16 @@ while running:
         if event.key == pygame.KEYDOWN:
             smer = (0, kaca)
 
+def hrana():
+    while True:
+        x = random.randint(0, (sirina / kaca) - 1) * kaca
+        y = random.randint(0, (visina / kaca) - 1) * kaca
+
+        food = (x, y)
+
+        if food not in snake:
+            return food
+
+kvadrat = snake[0]
+nov_kvadrat = (kvadrat[0] + smer[0], kvadrat[1] + smer[1])
+snake.append(0, nov_kvadrat)
