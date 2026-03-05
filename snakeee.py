@@ -71,3 +71,19 @@ while not exit:
 snake = [(300, 300)]
 smer = (kaca, 0)
 
+clock = pygame.time.Clock()
+run = True
+
+while running:
+    clock.tick(10)
+
+    if event.type == pygame.KEYDOWN:
+        if event.key == pygame.KEYLEFT:
+            smer = (-kaca, 0)
+        if event.key == pygame.KEYRIGHT:
+            smer = (kaca, 0)
+        if event.key == pygame.KEYUP:
+            smer = (0, -kaca)
+        if event.key == pygame.KEYDOWN:
+            smer = (0, kaca)
+
