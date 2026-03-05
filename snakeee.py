@@ -43,3 +43,31 @@
 #3. dodatna naloga
 #naredi megre obeh branchov 
 
+
+
+import pygame
+import random
+
+pygame.init()
+
+sirina = 500
+visina = 500
+kaca = 20
+
+canvas = pygame.display.set_mode(500,500)
+pygame.display.set_caption("moje prvo okno")
+
+color = (100,120,150)
+
+exit = False
+
+for event in pygame.event.get():
+	if event.type == pygame.QUIT:
+		exit = True
+
+while not exit:
+	canvas.fill(color)
+
+snake = [(300, 300)]
+smer = (kaca, 0)
+
